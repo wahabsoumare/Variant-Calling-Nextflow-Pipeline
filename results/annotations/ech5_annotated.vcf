@@ -1,0 +1,60 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.21+htslib-1.21
+##bcftoolsCommand=mpileup -f ReferencePfGenes.fasta ech5_sorted.bam
+##reference=file://ReferencePfGenes.fasta
+##contig=<ID=Pfk13,length=2181>
+##contig=<ID=Pfcytb,length=1131>
+##contig=<ID=Pfdhfr,length=1827>
+##contig=<ID=Pfdhps,length=2417>
+##contig=<ID=Pfcrt,length=3399>
+##contig=<ID=Pfmdr1,length=4260>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths (high-quality bases)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
+##bcftools_callVersion=1.21+htslib-1.21
+##bcftools_callCommand=call -mv -Ob -o ech5.vcf; Date=Fri May 16 15:03:19 2025
+##SnpEffVersion="5.2f (build 2025-02-07 08:36), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  Plasmodium_falciparum ech5.vcf "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	ech5_sorted.bam
+Pfk13	566	.	A	C	225.417	.	DP=253;VDB=3.02491e-06;SGB=-0.693147;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,186,63;MQ=60;ANN=C||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:0,249
+Pfk13	2141	.	T	A	18.2112	.	DP=5;SGB=-0.379885;RPBZ=1.22474;MQBZ=0;MQSBZ=0;BQBZ=0.707107;SCBZ=0;MQ0F=0;AC=1;AN=2;DP4=2,0,0,1;MQ=60;ANN=A||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:51,0,83:2,1
+Pfdhfr	152	.	A	T	228.417	.	DP=253;VDB=2.21349e-12;SGB=-0.693147;RPBZ=-1.20377;MQBZ=0;MQSBZ=0;BQBZ=3.02518;SCBZ=0;MQ0F=0;AC=2;AN=2;DP4=2,0,225,25;MQ=60;ANN=T||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:2,250
+Pfdhfr	175	.	T	C	228.422	.	DP=259;VDB=2.27888e-16;SGB=-0.693147;RPBZ=0.382986;MQBZ=0;MQSBZ=0;BQBZ=2.1567;SCBZ=0.0623783;MQ0F=0;AC=2;AN=2;DP4=1,0,233,24;MQ=60;ANN=C||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:1,257
+Pfdhfr	323	.	G	A	225.417	.	DP=255;VDB=8.08724e-23;SGB=-0.693147;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,217,38;MQ=60;ANN=A||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:0,255
+Pfdhps	184	.	AATATATATATATATATATATATATATATATAT	AATATATATATATATATATATATATAT,AATATATATATATATATATATATAT	194.216	.	INDEL;IDV=125;IMF=0.502008;DP=249;VDB=1.11255e-09;SGB=-0.693147;RPBZ=-11.9415;MQBZ=2.4843;MQSBZ=-0.418692;BQBZ=-1.806;SCBZ=-1.83276;MQ0F=0.00803213;AC=1,1;AN=2;DP4=57,62,86,23;MQ=59;ANN=AATATATATATATATATATATATAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND,AATATATATATATATATATATATATAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/2:255,195,205,255,0,255:119,65,30
+Pfdhps	1482	.	T	G	225.417	.	DP=249;VDB=0.9999;SGB=-0.693147;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,160,86;MQ=60;ANN=G||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:0,246
+Pfcrt	211	.	G	T	120.415	.	DP=5;VDB=0.21346;SGB=-0.511536;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,2,1;MQ=60;ANN=T||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:150,9,0:0,3
+Pfcrt	1065	.	AT	ATTT	36.5046	.	INDEL;IDV=7;IMF=0.194444;DP=36;VDB=0.00306499;SGB=-0.590765;RPBZ=4.33834;MQBZ=3.69125;BQBZ=-0.632456;SCBZ=2.04257;MQ0F=0.305556;AC=2;AN=2;DP4=24,0,0,5;MQ=13;ANN=ATTT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:65,29,0:24,5
+Pfcrt	1073	.	A	T	32.4648	.	DP=36;VDB=0.000191588;SGB=-0.636426;RPBZ=4.33834;MQBZ=3.69125;MQSBZ=3.35865;BQBZ=-0.514233;SCBZ=1.15766;MQ0F=0.333333;AC=1;AN=2;DP4=28,1,0,7;MQ=14;ANN=T||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:65,0,20:29,7
+Pfcrt	1408	.	ATTTTTTTTTTTTTTTTT	ATTTTTTTTTTTTTTTTTTTT	8.53634	.	INDEL;IDV=7;IMF=0.583333;DP=12;VDB=0.155969;SGB=-0.616816;RPBZ=-2.44026;MQBZ=0;BQBZ=-2.07931;SCBZ=0;MQ0F=0;AC=1;AN=2;DP4=5,0,6,0;MQ=60;ANN=ATTTTTTTTTTTTTTTTTTTT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:54,15,35:5,1
+Pfcrt	1778	.	ATAT	ATATATATATATATATATGTAT,ATATATATATATATATATATGTAT	24.6407	.	INDEL;IDV=4;IMF=0.25;DP=16;VDB=0.0681597;SGB=-0.511536;RPBZ=0.485428;MQBZ=0;MQSBZ=0;BQBZ=-0.650212;SCBZ=-1.8725;MQ0F=0;AC=1,1;AN=2;DP4=3,5,0,3;MQ=60;ANN=ATATATATATATATATATATGTAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND,ATATATATATATATATATGTAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/2:80,48,47,48,0,47:8,1,1
+Pfcrt	2193	.	A	T	8.99921	.	DP=1;SGB=-0.379885;MQ0F=0;AC=2;AN=2;DP4=0,0,1,0;MQ=60;ANN=T||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:38,3,0:0,1
+Pfcrt	2338	.	GATATATATATATATATATATATATATATATATATAT	GATATATATATATATATATATATATATATATATAT	48.2035	.	INDEL;IDV=7;IMF=0.538462;DP=13;VDB=0.0347691;SGB=-0.616816;RPBZ=0;MQBZ=1.59545;MQSBZ=-0.912871;BQBZ=-1.63398;SCBZ=0;MQ0F=0.153846;AC=1;AN=2;DP4=2,4,3,3;MQ=50;ANN=GATATATATATATATATATATATATATATATATAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:89,8,41:6,4
+Pfcrt	2530	.	T	A	118.376	.	DP=20;VDB=2.26006e-08;SGB=-0.676189;RPBZ=-2.28697;MQBZ=-4.24264;MQSBZ=1.07606;BQBZ=-1.36614;SCBZ=4.15414;MQ0F=0;AC=1;AN=2;DP4=8,1,11,0;MQ=49;ANN=A||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:151,0,166:9,11
+Pfcrt	2545	.	G	A	21.3283	.	DP=19;VDB=2.26006e-08;SGB=-0.676189;RPBZ=3.67298;MQBZ=-4.10961;BQBZ=-3.0008;SCBZ=0;MQ0F=0;AC=1;AN=2;DP4=8,0,11,0;MQ=48;ANN=A||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:54,0,122:8,11
+Pfcrt	2767	.	ATTTTTTTTTTTTTTTTTT	ATTTTTTTTTTTTTTTTTTTTTTTT,ATTTTTTTTTTTTTTTTTTTTTTTTTTT	40.5727	.	INDEL;IDV=2;IMF=0.5;DP=4;VDB=0.32;SGB=-0.453602;RPBZ=-1.54919;MQBZ=0;MQSBZ=0;BQBZ=-1.61533;SCBZ=-1.63299;MQ0F=0;AC=1,1;AN=2;DP4=2,0,2,0;MQ=60;ANN=ATTTTTTTTTTTTTTTTTTTTTTTT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND,ATTTTTTTTTTTTTTTTTTTTTTTTTTT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/2:100,50,51,50,0,51:2,1,1
+Pfcrt	3013	.	CATATATATATATATATATATATATAT	CATATATATATATATATATATATATATAT	80.6109	.	INDEL;IDV=3;IMF=0.333333;DP=9;VDB=0.472095;SGB=-0.556411;RPBZ=-2.06559;MQBZ=0;MQSBZ=0;BQBZ=-1.51186;SCBZ=0.306786;MQ0F=0;AC=1;AN=2;DP4=1,4,1,3;MQ=60;ANN=CATATATATATATATATATATATATATAT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	0/1:113,0,9:5,4
+Pfcrt	3020	.	AT	ATGTT	17.1103	.	INDEL;IDV=6;IMF=0.122449;DP=49;VDB=0.0138351;SGB=-0.556411;RPBZ=0.3373;MQBZ=2.29539;MQSBZ=-0.126169;BQBZ=-0.282899;SCBZ=-1.68776;MQ0F=0.244898;AC=2;AN=2;DP4=7,15,3,1;MQ=28;ANN=ATGTT||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:45,4,0:22,4
+Pfcrt	3105	.	C	T	188.416	.	DP=9;VDB=0.00297521;SGB=-0.636426;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,1,6;MQ=60;ANN=T||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:218,21,0:0,7
+Pfmdr1	2515	.	A	G	225.422	.	DP=250;VDB=2.31924e-05;SGB=-0.693147;MQSBZ=0;MQ0F=0;AC=2;AN=2;DP4=0,0,189,61;MQ=60;ANN=G||MODIFIER|||||||||||||ERROR_CHROMOSOME_NOT_FOUND	GT:PL:AD	1/1:255,255,0:0,249
