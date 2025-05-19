@@ -67,7 +67,9 @@ params {
 
 ▶️ Exécution du pipeline
 
+```bash
 nextflow run main.nf
+```
 
 Par défaut, le pipeline :
 
