@@ -21,25 +21,27 @@ Ce pipeline, développé avec [Nextflow](https://www.nextflow.io/), automatise l
 
 ## 🗂 Structure du projet
 
+```bash
 pipeline_nextflow/
-├── main.nf # Fichier principal du pipeline
-├── nextflow.config # Paramètres d'exécution
-├── modules/ # Modules Nextflow (étapes du pipeline)
-│ ├── trim.nf
-│ ├── qc.nf
-│ ├── align.nf
-│ ├── call_variants.nf
-│ ├── annotate.nf
-│ └── visualize.nf
+├── main.nf                  # Fichier principal du pipeline
+├── nextflow.config          # Paramètres d'exécution
+├── modules/                 # Modules Nextflow (étapes du pipeline)
+│   ├── trim.nf
+│   ├── qc.nf
+│   ├── align.nf
+│   ├── call_variants.nf
+│   ├── annotate.nf
+│   └── visualize.nf
 ├── data/
-│ ├── fastq/ # Fichiers FASTQ (R1/R2)
-│ └── ref/ # Référence génomique (FASTA + index BWA)
+│   ├── fastq/               # Fichiers FASTQ (R1/R2)
+│   └── ref/                 # Référence génomique (FASTA + index BWA)
 ├── scripts/
-│ └── visualize.py # Script Python de visualisation
+│   └── visualize.py         # Script Python de visualisation
 ├── utils/
-│ └── snpEff/ # Outil SnpEff pour l’annotation
-└── results/ # Résultats générés
+│   └── snpEff/              # Outil SnpEff pour l’annotation
+└── results/                 # Résultats générés
 
+```
 
 ---
 
@@ -60,6 +62,8 @@ params {
     cpu     = 4
     memory  = '8 GB'
 }
+
+```
 
 ▶️ Exécution du pipeline
 
