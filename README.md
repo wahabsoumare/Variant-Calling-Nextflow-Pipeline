@@ -122,14 +122,6 @@ Inclure dans votre dépôt ou rapport :
 
     Graphiques de visualize.py
 
-📝 Remise du projet
-
-    Nom du fichier ZIP : Abdoul_Wahab_Soumare_pipeline_nextflow.zip
-
-    À envoyer à : bassirou.ngom@gmail.com
-
-    Date limite : 18 mai 2025
-
 📄 Licence
 
 Projet académique — Utilisation libre à des fins pédagogiques.
