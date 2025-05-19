@@ -1,7 +1,7 @@
 # pipeline_nextflow
 
 **Auteur** : Abdoul Wahab Soumare  
-**Master II** Master 2 Bio-Informatique et Biomathématiques – Université Cheikh Anta Diop de Dakar 
+**Master II** Master 2 Bio-Informatique et Biomathématiques – Université Cheikh Anta Diop de Dakar
 **Année** : 2025  
 **Cours** : Analyses de données NGS  
 **Examen final – Pipeline NGS avec Nextflow**
@@ -73,11 +73,11 @@ nextflow run main.nf
 
 Par défaut, le pipeline :
 
-    Cherche les fichiers *_R1.fastq.gz et *_R2.fastq.gz dans data/fastq/
+-Cherche les fichiers *_R1.fastq.gz et *_R2.fastq.gz dans data/fastq/
 
-    Utilise le fichier de référence situé dans data/ref/ReferencePfGenes.fasta
+-Utilise le fichier de référence situé dans data/ref/ReferencePfGenes.fasta
 
-    Génère les résultats dans results/
+-Génère les résultats dans results/
 
 📦 Étapes du pipeline
 
@@ -92,38 +92,35 @@ Par défaut, le pipeline :
 
 📊 Résultats générés
 
-    Fichiers FastQC (avant/après)
+-Fichiers FastQC (avant/après)
 
-    BAM alignés, triés et indexés
+-BAM alignés, triés et indexés
 
-    Fichiers VCF des variants
+-Fichiers VCF des variants
 
-    Fichiers annotés avec SnpEff
+-Fichiers annotés avec SnpEff
 
-    Graphiques et tableaux de visualisation (.png, .csv, .html…)
+-Graphiques et tableaux de visualisation (.png, .csv, .html…)
 
 🧪 Données utilisées
 
-    Reads : data/fastq/*.fastq.gz (paired-end)
+-Reads : data/fastq/*.fastq.gz (paired-end)
 
-    Référence : data/ref/ReferencePfGenes.fasta (indexé avec BWA)
+-Référence : data/ref/ReferencePfGenes.fasta (indexé avec BWA)
 
-    Annotation : via SnpEff dans utils/snpEff/
+-Annotation : via SnpEff dans utils/snpEff/
 
 🖼 Exemple de sortie
 
 Inclure dans votre dépôt ou rapport :
+-Capture d'écran du terminal montrant l'exécution Nextflow
 
-    Capture d'écran du terminal montrant l'exécution Nextflow
+-Résultats FastQC (HTML)
 
-    Résultats FastQC (HTML)
+-Exemple de fichier VCF
 
-    Exemple de fichier VCF
-
-    Graphiques de visualize.py
+-Graphiques de visualize.py
 
 📄 Licence
 
 Projet académique — Utilisation libre à des fins pédagogiques.
-
----
