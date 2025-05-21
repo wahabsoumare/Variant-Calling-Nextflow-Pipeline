@@ -1,10 +1,12 @@
-# pipeline_nextflow
+# 🧬 pipeline_nextflow
 
 **Auteur** : Abdoul Wahab Soumare  
-**Master II** Master 2 Bio-Informatique et Biomathématiques – Université Cheikh Anta Diop de Dakar
+**Master II** : Bio-Informatique et Biomathématiques – Université Cheikh Anta Diop de Dakar  
 **Année** : 2025  
 **Cours** : Analyses de données NGS  
 **Examen final – Pipeline NGS avec Nextflow**
+
+---
 
 ## 🎯 Objectif
 
@@ -40,12 +42,9 @@ pipeline_nextflow/
 ├── utils/
 │   └── snpEff/              # Outil SnpEff pour l’annotation
 └── results/                 # Résultats générés
-
 ```
 
----
-
-## ⚙️ Configuration (`nextflow.config`)
+⚙️ Configuration (nextflow.config)
 
 ```groovy
 nextflow.enable.dsl = 2
@@ -62,7 +61,6 @@ params {
     cpu     = 4
     memory  = '8 GB'
 }
-
 ```
 
 ▶️ Exécution du pipeline
@@ -73,11 +71,11 @@ nextflow run main.nf
 
 Par défaut, le pipeline :
 
--Cherche les fichiers *_R1.fastq.gz et *_R2.fastq.gz dans data/fastq/
+- Cherche les fichiers *_R1.fastq.gz et *_R2.fastq.gz dans data/fastq/
 
--Utilise le fichier de référence situé dans data/ref/ReferencePfGenes.fasta
+- Utilise le fichier de référence situé dans data/ref/ReferencePfGenes.fasta
 
--Génère les résultats dans results/
+- Génère les résultats dans results/
 
 📦 Étapes du pipeline
 
@@ -90,37 +88,83 @@ Par défaut, le pipeline :
 | Annotation         | `modules/annotate.nf`       | Annotation des variants avec SnpEff             |
 | Visualisation      | `modules/visualize.nf`      | Tableaux et graphiques avec `visualize.py`      |
 
+
 📊 Résultats générés
 
--Fichiers FastQC (avant/après)
+- Fichiers FastQC (avant/après)
 
--BAM alignés, triés et indexés
+- BAM alignés, triés et indexés
 
--Fichiers VCF des variants
+- Fichiers VCF des variants
 
--Fichiers annotés avec SnpEff
+- Fichiers annotés avec SnpEff
 
--Graphiques et tableaux de visualisation (.png, .csv, .html…)
+- Graphiques et tableaux de visualisation (.png, .csv, .html…)
 
 🧪 Données utilisées
 
--Reads : data/fastq/*.fastq.gz (paired-end)
+- Reads : data/fastq/*.fastq.gz (paired-end)
 
--Référence : data/ref/ReferencePfGenes.fasta (indexé avec BWA)
+- Référence : data/ref/ReferencePfGenes.fasta (indexé avec BWA)
 
--Annotation : via SnpEff dans utils/snpEff/
+- Annotation : via SnpEff dans utils/snpEff/
 
 🖼 Exemple de sortie
 
 Inclure dans votre dépôt ou rapport :
--Capture d'écran du terminal montrant l'exécution Nextflow
 
--Résultats FastQC (HTML)
+- Capture d'écran du terminal montrant l'exécution Nextflow
 
--Exemple de fichier VCF
+- Résultats FastQC (HTML)
 
--Graphiques de visualize.py
+- Exemple de fichier VCF
+
+- Graphiques de visualize.py
+
+⚙️ Installation de l’environnement Conda
+
+Ce pipeline repose sur un environnement Conda contenant tous les outils nécessaires pour l’analyse de données NGS.
+🔧 Étapes à suivre
+
+1. Installer Conda (si ce n’est pas déjà fait)
+    Télécharger et installer Miniconda ou Anaconda depuis : [Anaconda](https://docs.conda.io/en/latest/miniconda.html)
+
+2. Créer l’environnement à partir du fichier fourni :
+
+```bash
+conda env create -f environment.yml
+```
+
+3. Activer l’environnement :
+
+```bash
+conda activate ngs
+```
+
+4. (Optionnel) Vérifier les paquets installés :
+
+```bash
+conda list
+```
+
+✅ L’environnement ngs inclut les outils suivants :
+
+- bwa, samtools, bcftools, fastqc : pour les étapes d’alignement et variant calling
+
+- cutadapt : pour le trimming des reads
+
+- matplotlib, pandas, numpy : pour la visualisation des résultats
+
+- openjdk : pour exécuter SnpEff
+
+- Remarque : Si vous travaillez sur un autre système (Mac, Windows, etc.), il est recommandé de régénérer localement l’environnement avec :
+
+```bash
+conda env create -f environment.yml --force
+```
 
 📄 Licence
 
 Projet académique — Utilisation libre à des fins pédagogiques.
+
+---
