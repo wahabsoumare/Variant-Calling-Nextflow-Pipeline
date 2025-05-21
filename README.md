@@ -109,18 +109,6 @@ Par défaut, le pipeline :
 
 - Annotation : via SnpEff dans utils/snpEff/
 
-🖼 Exemple de sortie
-
-Inclure dans votre dépôt ou rapport :
-
-- Capture d'écran du terminal montrant l'exécution Nextflow
-
-- Résultats FastQC (HTML)
-
-- Exemple de fichier VCF
-
-- Graphiques de visualize.py
-
 ⚙️ Installation de l’environnement Conda
 
 Ce pipeline repose sur un environnement Conda contenant tous les outils nécessaires pour l’analyse de données NGS.
