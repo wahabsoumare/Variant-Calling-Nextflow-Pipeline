@@ -1,0 +1,4 @@
+ech2_sorted.bam	/home/wahab/Desktop/M2BIBM/NGS/Evaluation/pipeline_nextflow/work/7f/461d54654d201c07e754d8502c3756/ech2_sorted.bam
+ech3_sorted.bam	/home/wahab/Desktop/M2BIBM/NGS/Evaluation/pipeline_nextflow/work/7f/461d54654d201c07e754d8502c3756/ech3_sorted.bam
+ech4_sorted.bam	/home/wahab/Desktop/M2BIBM/NGS/Evaluation/pipeline_nextflow/work/7f/461d54654d201c07e754d8502c3756/ech4_sorted.bam
+ech5_sorted.bam	/home/wahab/Desktop/M2BIBM/NGS/Evaluation/pipeline_nextflow/work/7f/461d54654d201c07e754d8502c3756/ech5_sorted.bam

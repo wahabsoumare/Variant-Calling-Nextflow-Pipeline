@@ -71,7 +71,7 @@ nextflow run main.nf
 
 Par défaut, le pipeline :
 
-- Cherche les fichiers *_R1.fastq.gz et *_R2.fastq.gz dans data/fastq/
+- Cherche les fichiers _R1.fastq.gz et_R2.fastq.gz dans data/fastq/
 
 - Utilise le fichier de référence situé dans data/ref/ReferencePfGenes.fasta
 
@@ -87,7 +87,6 @@ Par défaut, le pipeline :
 | Variant Calling    | `modules/call_variants.nf`  | Détection de SNPs avec BCFtools                 |
 | Annotation         | `modules/annotate.nf`       | Annotation des variants avec SnpEff             |
 | Visualisation      | `modules/visualize.nf`      | Tableaux et graphiques avec `visualize.py`      |
-
 
 📊 Résultats générés
 
